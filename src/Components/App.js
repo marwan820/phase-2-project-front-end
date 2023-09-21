@@ -19,10 +19,10 @@ function App() {
 
   return (
     <>
-      <NavBar />
       <Header />
-      <ProductList catProducts={catProducts} />
+      <NavBar />
       <SearchForItem catProducts={catProducts} />
+      <ProductList catProducts={catProducts} />
     </>
   );
 }

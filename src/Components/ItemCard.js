@@ -2,8 +2,7 @@ import React from "react";
 
 const ItemCard = ({ item }) => {
   const { productId, productName, price, description, category, brand } = item;
-  //const categoryFilter = category.filter((item)=>{item === item})
-  console.log("Filter", category);
+
 
   function handleClick() {
     console.log("Button click");
