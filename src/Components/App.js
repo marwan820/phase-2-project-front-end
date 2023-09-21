@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./Header";
 import NavBar from "./NavBar";
-import Form from "./SearchForItem";
 import ProductList from "./ProductList";
 import SearchForItem from "./SearchForItem";
 //import { Route, Switch } from "react-router-dom";
