@@ -2,28 +2,30 @@ import React, { useState } from "react";
 
 const SearchForItem = ({ catProducts }) => {
   const [searchTerm, setSearchTerm] = useState("");
- const [categorySelect,setCategorySelect] = useState("")
+  const [categorySelect, setCategorySelect] = useState("All");
 
-  //const searchFilter = catProducts.filter((product) => {
-  //  if (searchTerm = "") return true
-  //  return product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  //})
-  //console.log(searchFilter)
+
+
+  // Pseudocode 
+  const categoryFiltered = catProducts.filter((item) => { 
+    if(categorySelect === "All") return true
+    return item.category === categorySelect
+  })
+   console.log(categoryFiltered)
+
   const handleSearchChange = ({ target }) => {
-    const value = target.value
+    const value = target.value;
     setSearchTerm(value);
   };
 
-  const handleCategoryChange = (e) =>{
-    const value = e.target.value
-    setCategorySelect((value))
-  }
-  console.log(categorySelect)
-  
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    setCategorySelect(value);
+  };
+
   const newArray = catProducts.map((product) => product.category);
 
   const filteredCategories = [...new Set(newArray)];
-
 
   const searchByCategory = filteredCategories.map((product) => {
     return (
@@ -43,7 +45,7 @@ const SearchForItem = ({ catProducts }) => {
         onChange={handleSearchChange}
       />
       <select onChange={handleCategoryChange}>
-        <option  value={categorySelect}>Filter by Category</option>
+        <option value={categorySelect}>Filter by Category</option>
         {searchByCategory}
       </select>
     </div>
