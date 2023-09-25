@@ -1,229 +1,49 @@
 {
-  "catProducts": [
+  "products": [
     {
-      "productId": "1",
-      "productName": "Cat Toy - Interactive Feather Wand",
-      "category": "Toys",
-      "brand": "Purrfect Play",
-      "price": 9.99,
-      "description": "Interactive feather wand for engaging playtime with your cat.",
-      "imageUrl": "https://example.com/cat_toy1.jpg"
-    },
-    {
-      "productId": "2",
-      "productName": "Catnip Mouse Toy",
-      "category": "Toys",
-      "brand": "NipNap",
-      "price": 5.99,
-      "description": "Soft mouse-shaped toy filled with catnip for feline enjoyment.",
-      "imageUrl": "https://example.com/cat_toy2.jpg"
-    },
-    {
-      "productId": "3",
-      "productName": "Cat Tunnel",
-      "category": "Furniture",
-      "brand": "CozyHaven",
-      "price": 14.99,
-      "description": "Foldable tunnel for hiding and play, providing a cozy space for your cat.",
-      "imageUrl": "https://example.com/cattunnel.jpg"
-    },
-    {
-      "productId": "4",
-      "productName": "Cat Scratching Post",
-      "category": "Furniture",
-      "brand": "ScratchMaster",
-      "price": 19.99,
-      "description": "Durable scratching post to keep your cat's claws healthy and entertained.",
-      "imageUrl": "https://example.com/scratchingpost.jpg"
-    },
-    {
-      "productId": "5",
-      "productName": "Cat Bed - Soft Plush Cushion",
-      "category": "Beds",
-      "brand": "DreamPaws",
-      "price": 12.99,
-      "description": "Soft and plush cat bed for a comfortable and cozy nap time.",
-      "imageUrl": "https://example.com/catbed.jpg"
-    },
-    {
-      "productId": "6",
-      "productName": "Cat Grooming Brush",
-      "category": "Grooming",
-      "brand": "GroomKitty",
-      "price": 8.99,
-      "description": "Gentle grooming brush to keep your cat's coat smooth and shiny.",
-      "imageUrl": "https://example.com/catbrush.jpg"
-    },
-    {
-      "productId": "7",
-      "productName": "Cat Collar with Bell",
+      "id": 1,
+      "name": "Cat Scratcher Post",
+      "price": "29.99",
+      "image": "https://catnipsum.com/wp-content/uploads/2020/01/PetFusion-3-Sided-Vertical-Cat-Scratching-Post.jpg",
+      "description": "This cat scratcher post is perfect for keeping your cat's nails trimmed and providing them with a place to play and exercise. It is made of durable materials and features a variety of different textures to keep your cat entertained.",
       "category": "Accessories",
-      "brand": "JinglePurr",
-      "price": 4.99,
-      "description": "Adjustable cat collar with a bell for safety and entertainment.",
-      "imageUrl": "https://example.com/catcollar.jpg"
+      "inCart": false
     },
     {
-      "productId": "8",
-      "productName": "Cat Litter Box",
-      "category": "Litter",
-      "brand": "CleanKitty",
-      "price": 19.99,
-      "description": "Spacious litter box with a lid for privacy and easy cleaning.",
-      "imageUrl": "https://example.com/litterbox.jpg"
-    },
-    {
-      "productId": "9",
-      "productName": "Cat Tree - Multi-level Climbing Tower",
+      "id": 2,
+      "name": "Cat Tree",
+      "price": "99.99",
+      "image": "https://i5.walmartimages.com/asr/d3ca421f-7750-48aa-b2a4-12b0d41b2eeb.d706468a43b0e28978821d629544aa8d.jpeg",
+      "description": "This cat tree is the perfect place for your cat to climb, scratch, and play. It features multiple levels with different activities, including a scratching post, a hammock, and a perch.",
       "category": "Furniture",
-      "brand": "ClimbPaws",
-      "price": 39.99,
-      "description": "Multi-level cat tree with scratching posts for climbing and play.",
-      "imageUrl": "https://example.com/cattree.jpg"
+      "inCart": false
     },
     {
-      "productId": "10",
-      "productName": "Interactive Laser Toy",
-      "category": "Interactive",
-      "brand": "LaserPounce",
-      "price": 7.99,
-      "description": "A laser toy that entertains and engages your cat with moving laser lights.",
-      "imageUrl": "https://example.com/lasertoy.jpg"
-    },
-    {
-      "productId": "11",
-      "productName": "Cat Sisal Ball Toy",
+      "id": 3,
+      "name": "Cat Tunnel",
+      "price": "19.99",
+      "image": "https://www.floppycats.com/wp-content/uploads/2020/11/Best-Cat-Tunnel-Indoor-2021-IMG_5323-2048x1536.jpg",
+      "description": "This cat tunnel is a great way to provide your cat with exercise and entertainment. It is made of durable materials and features a variety of different openings for your cat to explore.",
       "category": "Toys",
-      "brand": "SisalPlay",
-      "price": 3.99,
-      "description": "Sisal ball toy for batting and chasing, promoting exercise and fun.",
-      "imageUrl": "https://example.com/sisalball.jpg"
+      "inCart": false
     },
     {
-      "productId": "12",
-      "productName": "Catnip Infused Ball",
-      "category": "Interactive",
-      "brand": "NipBounce",
-      "price": 5.99,
-      "description": "A catnip-infused ball that stimulates your cat's senses and encourages play.",
-      "imageUrl": "https://example.com/catnipball.jpg"
-    },
-    {
-      "productId": "13",
-      "productName": "Cat Interactive Puzzle Feeder",
-      "category": "Interactive",
-      "brand": "PuzzlePaws",
-      "price": 11.99,
-      "description": "Interactive puzzle feeder for mental stimulation during feeding time.",
-      "imageUrl": "https://example.com/puzzlefeeder.jpg"
-    },
-    {
-      "productId": "14",
-      "productName": "Cat Tunnel with Crinkle Sound",
-      "category": "Toys",
-      "brand": "CrinkleTunnel",
-      "price": 8.99,
-      "description": "Tunnel with crinkle material for playful cats who love sounds.",
-      "imageUrl": "https://example.com/crinkletunnel.jpg"
-    },
-    {
-      "productId": "15",
-      "productName": "Cat Feather Teaser Wand",
-      "category": "Toys",
-      "brand": "FeatherFrenzy",
-      "price": 6.99,
-      "description": "Feather teaser wand to engage your cat in playful activities.",
-      "imageUrl": "https://example.com/feathertoy.jpg"
-    },
-    {
-      "productId": "16",
-      "productName": "Cat Window Perch",
+      "id": 4,
+      "name": "Cat Bed",
+      "price": "14.99",
+      "image": "https://i5.walmartimages.com/asr/2eea5e49-f62f-4de9-90d9-9525e2408287_1.23750ad8b01e110e3dbae1b0d11910b5.jpeg",
+      "description": "This cat bed is the perfect place for your cat to relax and curl up. It is made of soft and comfortable materials and features a raised rim to provide your cat with a sense of security.",
       "category": "Furniture",
-      "brand": "PerchPurr",
-      "price": 16.99,
-      "description": "Window perch for your cat to relax and observe the surroundings.",
-      "imageUrl": "https://example.com/catperch.jpg"
+      "inCart": false
     },
     {
-      "productId": "17",
-      "productName": "Cat Water Fountain",
-      "category": "Accessories",
-      "brand": "FlowPaws",
-      "price": 22.99,
-      "description": "Cat water fountain for fresh and flowing water, encouraging hydration.",
-      "imageUrl": "https://example.com/catfountain.jpg"
-    },
-    {
-      "productId": "18",
-      "productName": "Catnip Plush Toy",
+      "id": 5,
+      "name": "Cat Toys",
+      "price": "9.99",
+      "image": "https://i5.walmartimages.com/asr/2eea5e49-f62f-4de9-90d9-9525e2408287_1.23750ad8b01e110e3dbae1b0d11910b5.jpeg",
+      "description": "This pack of cat toys is perfect for keeping your cat entertained. It includes a variety of different toys, including a mouse, a ball, and a feather wand.",
       "category": "Toys",
-      "brand": "NipPlush",
-      "price": 4.99,
-      "description": "Plush toy filled with catnip for hours of play and enjoyment.",
-      "imageUrl": "https://example.com/catniptoy.jpg"
-    },
-    {
-      "productId": "19",
-      "productName": "Cat Hammock Bed",
-      "category": "Beds",
-      "brand": "HammockHaven",
-      "price": 17.99,
-      "description": "Hammock-style bed for your cat to lounge and nap comfortably.",
-      "imageUrl": "https://example.com/cathammoockbed.jpg"
-    },
-    {
-      "productId": "20",
-      "productName": "Cat Grooming Gloves",
-      "category": "Grooming",
-      "brand": "GentleTouch",
-      "price": 7.99,
-      "description": "Grooming gloves to brush and massage your cat's fur gently.",
-      "imageUrl": "https://example.com/groominggloves.jpg"
-    },
-    {
-      "productId": "21",
-      "productName": "Cat Litter Mat",
-      "category": "Litter",
-      "brand": "CleanStep",
-      "price": 6.99,
-      "description": "Litter mat to trap litter and keep your floors clean.",
-      "imageUrl": "https://example.com/littermat.jpg"
-    },
-    {
-      "productId": "22",
-      "productName": "Cat Toy - Rolling Ball",
-      "category": "Toys",
-      "brand": "RollingPurr",
-      "price": 3.99,
-      "description": "Ball toy that rolls and bounces for your cat's entertainment.",
-      "imageUrl": "https://example.com/rollingball.jpg"
-    },
-    {
-      "productId": "23",
-      "productName": "Cat Cave Bed",
-      "category": "Beds",
-      "brand": "CaveCozy",
-      "price": 15.99,
-      "description": "Cozy cave bed to provide your cat with a secure and warm resting place.",
-      "imageUrl": "https://example.com/catcavebed.jpg"
-    },
-    {
-      "productId": "24",
-      "productName": "Cat Scratcher Lounge",
-      "category": "Furniture",
-      "brand": "ScratchLounge",
-      "price": 21.99,
-      "description": "Cat scratcher lounge for scratching and lounging, promoting healthy claws.",
-      "imageUrl": "https://example.com/scratcherlounge.jpg"
-    },
-    {
-      "productId": "25",
-      "productName": "Cat Dental Toys Set",
-      "category": "Toys",
-      "brand": "DentalPaws",
-      "price": 12.99,
-      "description": "Set of dental toys for maintaining your cat's dental health and hygiene.",
-      "imageUrl": "https://example.com/dentaltoys.jpg"
+      "inCart": false
     }
   ]
 }

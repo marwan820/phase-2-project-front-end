@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
-const SearchForItem = ({ catProducts }) => {
+const SearchForItem = ({ catProducts, handleItemCategory }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [categorySelect, setCategorySelect] = useState("All");
 
-
-
-  // Pseudocode 
-  const categoryFiltered = catProducts.filter((item) => { 
-    if(categorySelect === "All") return true
-    return item.category === categorySelect
-  })
-   console.log(categoryFiltered)
+  // Pseudocode
+  function onCategoryChange() {
+    const categoryFiltered = catProducts.filter((item) => {
+      if (categorySelect === "All") return true;
+      return item.category === categorySelect;
+    });
+    return handleItemCategory(categoryFiltered);
+  }
 
   const handleSearchChange = ({ target }) => {
     const value = target.value;
@@ -21,11 +21,14 @@ const SearchForItem = ({ catProducts }) => {
   const handleCategoryChange = (e) => {
     const value = e.target.value;
     setCategorySelect(value);
+    onCategoryChange();
   };
 
-  const newArray = catProducts.map((product) => product.category);
+  const newArrayCategories = catProducts.map((product) => {
+    return product.category;
+  });
 
-  const filteredCategories = [...new Set(newArray)];
+  const filteredCategories = [...new Set(newArrayCategories)];
 
   const searchByCategory = filteredCategories.map((product) => {
     return (

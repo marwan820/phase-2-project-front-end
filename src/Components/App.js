@@ -11,18 +11,24 @@ import SearchForItem from "./SearchForItem";
 function App() {
   const [catProducts, setCatProducts] = useState([]);
 
+  //const productsCopy = JSON.parse(JSON.stringify(catProducts))
+ // console.log("copy",productsCopy)
+
   useEffect(() => {
-    fetch("http://localhost:3000/catProducts")
+    fetch("http://localhost:3002/products")
       .then((res) => res.json())
       .then((items) => setCatProducts(items));
   }, []);
+ // console.log("From app cat prudcts",catProducts)
+
+   const handleItemCategory = (array) => (console.log(array))
 
   return (
     <>
       <Header />
       <NavBar />
-      <SearchForItem catProducts={catProducts} />
-      <ProductList catProducts={catProducts} />
+      <SearchForItem catProducts={catProducts} handleItemCategory={handleItemCategory} />
+      <ProductList catProducts={catProducts} setCatProducts={setCatProducts}/>
     </>
   );
 }

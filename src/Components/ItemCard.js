@@ -1,19 +1,19 @@
 import React from "react";
 
 const ItemCard = ({ item }) => {
-  const { productId, productName, price, description, category, brand } = item;
+  const { id, name, price, description,image, category} = item;
 
 
   function handleClick() {
     console.log("Button click");
   }
   return (
-    <div key={productId} className="card">
-      <p>{productName}</p>
+    <div key={id} className="card">
+      <p>{name}</p>
       <p>${price}</p>
       <p>{description}</p>
       <p>{category}</p>
-      <p>{brand}</p>
+      <img src={image} alt={name}></img>
       <button onClick={handleClick} type="">
         Add to cart
       </button>
