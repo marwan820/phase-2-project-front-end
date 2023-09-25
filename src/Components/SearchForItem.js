@@ -47,8 +47,8 @@ const SearchForItem = ({ catProducts, handleItemCategory }) => {
         placeholder="Search for product"
         onChange={handleSearchChange}
       />
-      <select onChange={handleCategoryChange}>
-        <option value={categorySelect}>Filter by Category</option>
+      <select onChange={handleCategoryChange} value={categorySelect}>
+        <option value="All">Filter by Category</option>
         {searchByCategory}
       </select>
     </div>
