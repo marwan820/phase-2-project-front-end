@@ -1,42 +1,34 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-const SearchForItem = ({ catProducts, handleItemCategory }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [categorySelect, setCategorySelect] = useState("All");
-
-  // Pseudocode
-  function onCategoryChange() {
-    const categoryFiltered = catProducts.filter((item) => {
-      if (categorySelect === "All") return true;
-      return item.category === categorySelect;
-    });
-    return handleItemCategory(categoryFiltered);
+const SearchForItem = ({
+  catProducts,
+  categorySelect,
+  setCategorySelect,
+  setSearchTerm,
+  searchTerm,
+}) => {
+  const handleSearchChange = (e) => {setSearchTerm(e.target.value)
   }
 
-  const handleSearchChange = ({ target }) => {
-    const value = target.value;
-    setSearchTerm(value);
-  };
-
   const handleCategoryChange = (e) => {
-    const value = e.target.value;
-    setCategorySelect(value);
-    onCategoryChange();
-  };
+    const value = e.target.value
+    setCategorySelect(value)
+    // onCategoryChange();
+  }
 
   const newArrayCategories = catProducts.map((product) => {
-    return product.category;
-  });
+    return product.category
+  })
 
-  const filteredCategories = [...new Set(newArrayCategories)];
+  const filteredCategories = [...new Set(newArrayCategories)]
 
   const searchByCategory = filteredCategories.map((product) => {
     return (
       <option key={crypto.randomUUID()} value={product}>
         {product}
       </option>
-    );
-  });
+    )
+  })
 
   return (
     <div>
@@ -52,7 +44,7 @@ const SearchForItem = ({ catProducts, handleItemCategory }) => {
         {searchByCategory}
       </select>
     </div>
-  );
-};
+  )
+}
 
-export default SearchForItem;
+export default SearchForItem

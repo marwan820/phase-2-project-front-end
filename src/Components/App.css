@@ -8,6 +8,7 @@
 
 
 .cardDiv {
+  display: grid;
   color: blue;
   background-color: aquamarine;
   border: 50px black;
