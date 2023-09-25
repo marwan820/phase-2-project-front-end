@@ -5,6 +5,8 @@
   text-align: top
 }
 
+
+
 .cardDiv {
   color: blue;
   background-color: aquamarine;
@@ -23,7 +25,10 @@
   background-color: burlywood;
 }
 
-  
+.image{
+  width: inherit;
+  height: inherit;
+}  
   
   
 

@@ -13,7 +13,7 @@ const ItemCard = ({ item }) => {
       <p>${price}</p>
       <p>{description}</p>
       <p>{category}</p>
-      <img src={image} alt={name}></img>
+      <img className="image" src={image} alt={name}></img>
       <button onClick={handleClick} type="">
         Add to cart
       </button>
