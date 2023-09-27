@@ -4,12 +4,13 @@ const ItemCard = ({ item, addToCartList, deleteFromCart }) => {
   const { id, name, price, description, image, category } = item
   const [inCart, setIncart] = useState(false)
 
-  console.log(inCart)
   const addToCart = () => {
     setIncart((inCart) => !inCart)
     if (inCart === false) {
       addToCartList(item)
-    } else  { deleteFromCart(item)}
+    } else {
+      deleteFromCart(item)
+    }
   }
 
   return (
