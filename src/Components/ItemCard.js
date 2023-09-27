@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react"
 
-const ItemCard = ({ item }) => {
-  const { id, name, price, description,image, category} = item;
+const ItemCard = ({ item, addToCartList }) => {
+  const { id, name, price, description, image, category } = item
+  const [inCart, setIncart] = useState(false)
 
-
-  function handleClick() {
-    console.log("Button click");
+  console.log(inCart)
+  const addToCart = () => {
+    setIncart((inCart) => !inCart)
+    addToCartList(item)
   }
+
   return (
     <div key={id} className="card">
       <p>{name}</p>
@@ -14,11 +17,11 @@ const ItemCard = ({ item }) => {
       <p>{description}</p>
       <p>{category}</p>
       <img className="image" src={image} alt={name}></img>
-      <button onClick={handleClick} type="">
-        Add to cart
+      <button onClick={addToCart} type="">
+       { inCart === false ? "Add to cart" : "Delete from cart"}
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default ItemCard;
+export default ItemCard

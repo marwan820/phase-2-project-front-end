@@ -1,9 +1,9 @@
 import React from "react";
 import ItemCard from "./ItemCard";
-const ProductList = ({ catProducts }) => {
+const ProductList = ({ catProducts,addToCartList}) => {
  
 
-    const productList = catProducts.map((item) => <ItemCard key={item.id}  item={item}/>)
+    const productList = catProducts.map((item) => <ItemCard addToCartList={addToCartList} key={item.id}  item={item}/>)
   return (
     <>
   <main className="cardDiv">

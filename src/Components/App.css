@@ -8,7 +8,6 @@
 
 
 .cardDiv {
-  display: grid;
   color: blue;
   background-color: aquamarine;
   border: 50px black;
@@ -28,7 +27,7 @@
 
 .image{
   width: inherit;
-  height: inherit;
+  height: inher;
 }  
   
   

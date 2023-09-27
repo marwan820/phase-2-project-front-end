@@ -4,6 +4,7 @@ const NavBar = () => {
   return (
     <div>
       <nav>NavBar</nav>
+      <cart>Cart</cart>
     </div>
   );
 };
