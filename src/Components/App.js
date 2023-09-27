@@ -34,6 +34,11 @@ function App() {
 
   }
 
+  function deleteFromCart(item){
+    const newArray = cartList.filter((product) => product.id !== item.id )
+    setToCartList(newArray)
+  }
+
   console.log("cart list",cartList)
 
   const filteredItems = productSearch.filter((item) => {
@@ -80,9 +85,10 @@ function App() {
         catProducts={filteredItems}
         setCatProducts={setCatProducts}
         addToCartList={addToCartList}
+        deleteFromCart={deleteFromCart}
 
       />
-      <ShoppingCart  />
+      <ShoppingCart cartList={cartList} />
     </>
   )
 }

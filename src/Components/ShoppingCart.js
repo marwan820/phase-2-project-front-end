@@ -1,9 +1,10 @@
-export default function ShoppingCart(){
+export default function ShoppingCart({cartList}){
+    const cartListArray = cartList.map((item) => <li key={item.id}>{item.name}</li>)
     return(
         <div>
         <h1>Shopping Cart</h1>
         <ul>
-            <li> list of items in cart</li>
+    {cartListArray}
         </ul>
         </div>
     )
