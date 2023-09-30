@@ -19,7 +19,7 @@ const ItemCard = ({ item, addToCartList, deleteFromCart }) => {
       <p>${price}</p>
       <p>{description}</p>
       <p>{category}</p>
-      <img src={image} alt={name}></img>
+      <img className="item-image" src={image} alt={name}></img>
       <button onClick={addToCart} type="button">
         {inCart === false ? "Add to cart" : "Delete from cart"}
       </button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const SearchForItem = ({
   catProducts,
@@ -7,7 +7,8 @@ const SearchForItem = ({
   setSearchTerm,
   searchTerm,
 }) => {
-  const handleSearchChange = (e) => {setSearchTerm(e.target.value)
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value)
   }
 
   const handleCategoryChange = (e) => {

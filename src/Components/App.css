@@ -7,28 +7,18 @@
 
 
 
-.cardDiv {
+.cardDiv{
   display: block;
-  background-color: aquamarine;
-  border: 25px black solid;
-  padding: 2%;
-  width:auto;
-
-  height:10%
+  border:  10px solid red;
+  min-width: 10%;
+  
   
 }
 
-.card{
-  width: fit-content;
-  box-sizing: border-box;
-  border-style:groove;
-  margin-bottom: 10%;
-  background-color: rgb(50, 30, 163);
+.item-image{
+  width: 30%
 }
 
-.image{
-  width: inherit;
-  height: inher;
-}  
+
   
   

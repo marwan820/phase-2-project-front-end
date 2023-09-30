@@ -1,14 +1,23 @@
-import CartItems from "./CartItems"
+import React from "react"
+
+
 
 export default function ShoppingCart({cartList,}){
-const cartListItems = cartList.map(item => <CartItems  key={cartList.id} item={item}/>)
+    const cartItemList = cartList.map((item) => {
+        return( <p key={item.id}>{item.name}</p>
+        
+        )})
 
+    
+    console.log("cartlist from shopping list",cartList)
+/*  const cartListItems = cartList.map(item => <CartItems  key={cartList.id} item={item}/>)
+*/
     return(
-        <div>
+        <>
         <h1>Shopping Cart</h1>
         <div className = "shoppingCartContainer">
-            {cartListItems}
+            {cartItemList}
         </div>
-        </div>
+        </>
     )
 }

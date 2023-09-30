@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
+import React, { useState, useEffect } from "react"
 import "./App.css"
 import Header from "./Header"
 import NavBar from "./NavBar"
@@ -19,6 +18,8 @@ function App() {
       .then((res) => res.json())
       .then((items) => setCatProducts(items))
   }, [])
+
+  console.log("cartList from app", cartList)
 
   const productSearch = catProducts.filter((item) => {
     return (
@@ -71,7 +72,6 @@ function App() {
             deleteFromCart={deleteFromCart}
           />
         </Route>
-
         <Route path="/cart">
           <ShoppingCart cartList={cartList} deleteFromCart={handleCartDelete} />
         </Route>
