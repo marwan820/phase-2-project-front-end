@@ -6,14 +6,13 @@ import NavBar from "./NavBar"
 import ProductList from "./ProductList"
 import SearchForItem from "./SearchForItem"
 import ShoppingCart from "./ShoppingCart"
-//import { Route, Switch } from "react-router-dom";
-//import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { Route, Switch } from "react-router-dom"
 
 function App() {
   const [catProducts, setCatProducts] = useState([])
   const [categorySelect, setCategorySelect] = useState("All")
   const [searchTerm, setSearchTerm] = useState("")
-  const [cartList,setToCartList]= useState([])
+  const [cartList, setToCartList] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:3002/products")
@@ -28,13 +27,19 @@ function App() {
     )
   })
 
-  function addToCartList(item){
-    // item enter into cartList 
-    setToCartList([...cartList,item])
-
+  function addToCartList(item) {
+    // item enter into cartList
+    setToCartList([...cartList, item])
   }
 
-  console.log("cart list",cartList)
+  function deleteFromCart(item) {
+    const newArray = cartList.filter((product) => product.id !== item.id)
+    setToCartList(newArray)
+  }
+
+  const handleCartDelete = (e) => {
+    console.log(e)
+  }
 
   const filteredItems = productSearch.filter((item) => {
     if (categorySelect === "All") {
@@ -44,46 +49,35 @@ function App() {
     }
   })
 
-  
-
-  //Pseudocode
-  /*  when user hits add to cart, the item will be inCart, and will have a shopping cart list of all items inCart
-   and will iterate and render all items in cart, 
-
-  const shoppingCartFilter = catproducts.filter((item) => item.inCart = true )
-  const shoppingCartList = shoppingCartFilter.map((item) <li key={item.id}>{item.name}{item.price}</li>)
-
-  
-  
-  
-  
-  
-  
-  
-  */ 
-  
-
-   console.log(catProducts)
+  //console.log(catProducts)
 
   return (
-    <>
+    <div className="app-container">
       <Header />
       <NavBar />
-      <SearchForItem
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        catProducts={catProducts}
-        categorySelect={categorySelect}
-        setCategorySelect={setCategorySelect}
-      />
-      <ProductList
-        catProducts={filteredItems}
-        setCatProducts={setCatProducts}
-        addToCartList={addToCartList}
+      <Switch>
+        <Route path="/">
+          <SearchForItem
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            catProducts={catProducts}
+            categorySelect={categorySelect}
+            setCategorySelect={setCategorySelect}
+          />
 
-      />
-      <ShoppingCart  />
-    </>
+          <ProductList
+            catProducts={filteredItems}
+            setCatProducts={setCatProducts}
+            addToCartList={addToCartList}
+            deleteFromCart={deleteFromCart}
+          />
+        </Route>
+
+        <Route path="/cart">
+          <ShoppingCart cartList={cartList} deleteFromCart={handleCartDelete} />
+        </Route>
+      </Switch>
+    </div>
   )
 }
 

@@ -1,13 +1,17 @@
 import React, { useState } from "react"
 
-const ItemCard = ({ item, addToCartList }) => {
+
+const ItemCard = ({ item, addToCartList, deleteFromCart }) => {
   const { id, name, price, description, image, category } = item
   const [inCart, setIncart] = useState(false)
 
-  console.log(inCart)
   const addToCart = () => {
     setIncart((inCart) => !inCart)
-    addToCartList(item)
+    if (inCart === false) {
+      addToCartList(item)
+    } else {
+      deleteFromCart(item)
+    }
   }
 
   return (
@@ -16,9 +20,9 @@ const ItemCard = ({ item, addToCartList }) => {
       <p>${price}</p>
       <p>{description}</p>
       <p>{category}</p>
-      <img className="image" src={image} alt={name}></img>
-      <button onClick={addToCart} type="">
-       { inCart === false ? "Add to cart" : "Delete from cart"}
+      <img src={image} alt={name}></img>
+      <button onClick={addToCart} type="button">
+        {inCart === false ? "Add to cart" : "Delete from cart"}
       </button>
     </div>
   )

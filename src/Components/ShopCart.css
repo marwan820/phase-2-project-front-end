@@ -1,0 +1,14 @@
+.shoppingCart{
+    background-color: blue;
+    display:block;
+    box-sizing: border-box;
+    border: solid black 5px;
+
+    
+}
+
+.cartItem{
+    border: solid 10px green;
+    box-sizing: border-box;
+    height: 10%;
+}

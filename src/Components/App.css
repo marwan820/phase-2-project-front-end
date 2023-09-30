@@ -8,21 +8,22 @@
 
 
 .cardDiv {
-  color: blue;
+  display: block;
   background-color: aquamarine;
-  border: 50px black;
+  border: 25px black solid;
   padding: 2%;
-  width:auto
+  width:auto;
+
+  height:10%
   
 }
 
 .card{
-  width: 100%;
-  display: block;
+  width: fit-content;
   box-sizing: border-box;
   border-style:groove;
   margin-bottom: 10%;
-  background-color: burlywood;
+  background-color: rgb(50, 30, 163);
 }
 
 .image{
@@ -31,4 +32,3 @@
 }  
   
   
-
