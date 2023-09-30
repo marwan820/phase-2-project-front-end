@@ -37,13 +37,9 @@ function App() {
     setToCartList(newArray)
   }
 
-<<<<<<< HEAD
   const handleCartDelete = (e) => {
     console.log(e)
   }
-=======
-  console.log("cart list", cartList)
->>>>>>> refs/remotes/origin/main
 
   const filteredItems = productSearch.filter((item) => {
     if (categorySelect === "All") {
@@ -53,27 +49,7 @@ function App() {
     }
   })
 
-<<<<<<< HEAD
   //console.log(catProducts)
-=======
-  //Pseudocode
-  /*  when user hits add to cart, the item will be inCart, and will have a shopping cart list of all items inCart
-   and will iterate and render all items in cart, 
-
-  const shoppingCartFilter = catproducts.filter((item) => item.inCart = true )
-  const shoppingCartList = shoppingCartFilter.map((item) <li key={item.id}>{item.name}{item.price}</li>)
-
-  
-  
-  
-  
-  
-  
-  
-  */
-
-  console.log(catProducts)
->>>>>>> refs/remotes/origin/main
 
   return (
     <div className="app-container">
@@ -88,17 +64,11 @@ function App() {
             categorySelect={categorySelect}
             setCategorySelect={setCategorySelect}
           />
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> refs/remotes/origin/main
           <ProductList
             catProducts={filteredItems}
             setCatProducts={setCatProducts}
             addToCartList={addToCartList}
             deleteFromCart={deleteFromCart}
-<<<<<<< HEAD
           />
         </Route>
 
@@ -107,16 +77,6 @@ function App() {
         </Route>
       </Switch>
     </div>
-=======
-            />
-            </Route>
-       
-        <Route path="/cart">
-          <ShoppingCart cartList={cartList} />
-        </Route>
-      </Switch>
-    </>
->>>>>>> refs/remotes/origin/main
   )
 }
 
