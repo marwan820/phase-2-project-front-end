@@ -29,7 +29,6 @@ function App() {
   })
 
   function addToCartList(item) {
-    // item enter into cartList
     setToCartList([...cartList, item])
   }
 
@@ -38,9 +37,9 @@ function App() {
     setToCartList(newArray)
   }
 
-  const handleCartDelete = (e) => {
+  /* const handleCartDelete = (e) => {
     console.log(e)
-  }
+  } */
 
   const filteredItems = productSearch.filter((item) => {
     if (categorySelect === "All") {
@@ -54,8 +53,8 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header />
-      <NavBar />
+      <Header className="header" />
+      <NavBar className="navBar" />
       <Switch>
         <Route path="/">
           <SearchForItem
@@ -72,8 +71,10 @@ function App() {
             deleteFromCart={deleteFromCart}
           />
         </Route>
-        <Route path="/cart">
-          <ShoppingCart cartList={cartList} deleteFromCart={handleCartDelete} />
+        <Route exact path="/cart">
+          <ShoppingCart
+            cartList={cartList} /* deleteFromCart={handleCartDelete} */
+          />
         </Route>
       </Switch>
     </div>

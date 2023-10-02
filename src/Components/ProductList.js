@@ -11,9 +11,9 @@ const ProductList = ({ catProducts, addToCartList, deleteFromCart }) => {
     />
   ))
   return (
-    <>
-      <main className="cardDiv">{productList}</main>
-    </>
+    <main className="container">
+     {productList}
+    </main>
   )
 }
 

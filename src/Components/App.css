@@ -5,15 +5,15 @@
   text-align: top
 }
 
-
-
-.cardDiv{
-  display: block;
-  border:  10px solid red;
-  min-width: 10%;
-  
-  
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
 }
+
+
+
 
 .item-image{
   width: 30%

@@ -15,10 +15,10 @@ const ItemCard = ({ item, addToCartList, deleteFromCart }) => {
 
   return (
     <div key={id} className="card">
-      <p>{name}</p>
-      <p>${price}</p>
-      <p>{description}</p>
-      <p>{category}</p>
+      <span>{name}</span>
+      <span>${price}</span>
+      <span>{description}</span>
+      <span>{category}</span>
       <img className="item-image" src={image} alt={name}></img>
       <button onClick={addToCart} type="button">
         {inCart === false ? "Add to cart" : "Delete from cart"}
